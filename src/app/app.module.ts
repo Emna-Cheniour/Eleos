@@ -18,6 +18,7 @@ import { TeamComponent } from './team/team.component';
 import { EventComponent } from './event/event.component';
 import { VolunteerFormComponent } from './volunteer-form/volunteer-form.component';
 import { BlogComponent } from './blog/blog.component';
+import { EventItemComponent } from './event-item/event-item.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BlogComponent } from './blog/blog.component';
     TeamComponent,
     EventComponent,
     VolunteerFormComponent,
-    BlogComponent
+    BlogComponent,
+    EventItemComponent
   ],
   imports: [
     BrowserModule
