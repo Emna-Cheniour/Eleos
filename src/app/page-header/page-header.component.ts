@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-header',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PageHeaderComponent implements OnInit {
 
   constructor() { }
-
+  @Input() pageName:string | undefined;
   ngOnInit(): void {
   }
 
