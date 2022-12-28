@@ -18,6 +18,8 @@ import { TeamComponent } from './team/team.component';
 import { EventComponent } from './event/event.component';
 import { VolunteerFormComponent } from './volunteer-form/volunteer-form.component';
 import { BlogComponent } from './blog/blog.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DonateComponent } from './donate/donate.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +39,12 @@ import { BlogComponent } from './blog/blog.component';
     TeamComponent,
     EventComponent,
     VolunteerFormComponent,
-    BlogComponent
+    BlogComponent,
+    DonateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
