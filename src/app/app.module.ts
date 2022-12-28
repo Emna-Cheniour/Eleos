@@ -18,8 +18,13 @@ import { TeamComponent } from './team/team.component';
 import { EventComponent } from './event/event.component';
 import { VolunteerFormComponent } from './volunteer-form/volunteer-form.component';
 import { BlogComponent } from './blog/blog.component';
+<<<<<<< HEAD
 import { EventItemComponent } from './event-item/event-item.component';
 import { FactsComponent } from './facts/facts.component';
+=======
+import { AppRoutingModule } from './app-routing.module';
+import { DonateComponent } from './donate/donate.component';
+>>>>>>> 923331d7dd4f1d72b053d31395ef6cb92efe5d8b
 
 @NgModule({
   declarations: [
@@ -40,11 +45,16 @@ import { FactsComponent } from './facts/facts.component';
     EventComponent,
     VolunteerFormComponent,
     BlogComponent,
+<<<<<<< HEAD
     EventItemComponent,
     FactsComponent
+=======
+    DonateComponent
+>>>>>>> 923331d7dd4f1d72b053d31395ef6cb92efe5d8b
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

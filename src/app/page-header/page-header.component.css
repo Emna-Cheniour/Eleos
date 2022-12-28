@@ -6,7 +6,11 @@
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
+<<<<<<< HEAD
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../assets/img/page-header.jpg);
+=======
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(src\assets\img\page-header.jpg);
+>>>>>>> 923331d7dd4f1d72b053d31395ef6cb92efe5d8b
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
