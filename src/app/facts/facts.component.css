@@ -1,0 +1,60 @@
+.facts {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    margin: 45px 0;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+}
+
+.facts .facts-item {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+}
+
+.facts .facts-item i {
+    margin-top: 10px;
+    font-size: 60px;
+    line-height: 60px;
+    color: #FDBE33;
+}
+
+.facts .facts-text {
+    padding-left: 20px;
+}
+
+.facts .facts-text h3 {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.facts .facts-text h3::after {
+    position: absolute;
+    top: 0px;
+    color: #ffffff;
+    font-size: 25px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.facts .facts-text h3.facts-plus::after {
+    content: "\f067";
+    right: -25px;
+}
+
+.facts .facts-text h3.facts-dollar::after {
+    content: "\f155";
+    right: -18px;
+}
+
+.facts .facts-text p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
