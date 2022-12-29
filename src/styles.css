@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+@import "../free-charity-website-template/lib/flaticon/font/flaticon.css";
+@import "../free-charity-website-template/lib/animate/animate.min.css";
+/* @import "../free-charity-website-template/lib/owlcarousel/assets/owl.carousel.min.css"; */
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/

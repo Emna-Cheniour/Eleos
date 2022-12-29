@@ -1,6 +1,8 @@
 /*******************************/
 /********** Hero CSS ***********/
 /*******************************/
+@import "../../../free-charity-website-template/lib/animate/animate.min.css";
+
 .carousel {
     position: relative;
     width: 100%;

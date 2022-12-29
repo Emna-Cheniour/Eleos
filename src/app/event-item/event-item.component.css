@@ -4,27 +4,27 @@
     padding: 45px 0 15px 0;
 }
 
-.event .event-item {
+.event-item {
     margin-bottom: 30px;
     background: #f3f6ff;
 }
 
-.event .event-item img {
+.event-item img {
     width: 100%;
 }
 
-.event .event-content {
+.event-content {
     padding: 30px;
     display: flex;
 }
 
-.event .event-meta {
+.event-meta {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
 }
 
-.event .event-meta p {
+.event-meta p {
     position: relative;
     margin-bottom: 8px;
     padding-bottom: 8px;
@@ -32,22 +32,22 @@
     border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
 
-.event .event-meta p:last-child {
+.event-meta p:last-child {
     border-bottom: none;
 }
 
-.event .event-meta i {
+.event-meta i {
     color: #4a4c70;
     width: 25px;
 }
 
-.event .event-text {
+.event-text {
     position: relative;
     margin-left: 20px;
     padding-left: 20px;
 }
 
-.event .event-text::before {
+.event-text::before {
     position: absolute;
     content: "";
     width: 1px;
@@ -57,7 +57,7 @@
     background: rgba(0, 0, 0, .15);
 }
 
-.event .event-text::after {
+.event-text::after {
     position: absolute;
     content: "";
     width: 3px;
@@ -67,50 +67,50 @@
     background: #FDBE33;
 }
 
-.event .event-text h3 {
+.event-text h3 {
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.event .event-text p {
+.event-text p {
     margin: 0;
 }
 
-.event .btn.btn-custom {
+.btn.btn-custom {
     margin-top: 20px;
     padding: 8px 30px;
 }
 
 @media (max-width: 575.98px) {
-    .event .event-content {
+    .event-content {
         flex-direction: column;
     }
     
-    .event .event-meta {
+    .event-meta {
         flex-direction: row;
     }
     
-    .event .event-meta p {
+    .event-meta p {
         font-size: 14px;
         padding-right: 7px;
     }
     
-    .event .event-meta p:last-child {
+    .event-meta p:last-child {
         border-bottom: 1px solid rgba(0, 0, 0, .15);
     }
     
-    .event .event-meta i {
+    .event-meta i {
         width: 18px;
     }
     
-    .event .event-text {
+    .event-text {
         margin: 0;
         padding: 0;
     }
     
-    .event .event-text::before,
-    .event .event-text::after {
+    .event-text::before,
+    .event-text::after {
         display: none;
     }
 }
