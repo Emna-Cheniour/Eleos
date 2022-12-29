@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -22,6 +22,8 @@ import { EventItemComponent } from './event-item/event-item.component';
 import { FactsComponent } from './facts/facts.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DonateComponent } from './donate/donate.component';
+import { initializeKeycloak } from './utility/app.init';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 
 @NgModule({
   declarations: [
@@ -48,9 +50,15 @@ import { DonateComponent } from './donate/donate.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    KeycloakAngularModule
   ],
-  providers: [],
+  providers: [{
+    provide: APP_INITIALIZER,
+    useFactory: initializeKeycloak,
+    multi: true,
+    deps:  [KeycloakService]
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

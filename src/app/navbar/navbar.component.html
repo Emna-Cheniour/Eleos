@@ -22,7 +22,9 @@
                         <a href="/volunteer" class="dropdown-item">Become A Volunteer</a>
                     </div>
                 </div>
+                
                 <a href="/contact" class="nav-item nav-link">Contact</a>
+                <a  class="nav-item nav-link" *ngIf="isLoggedIn" (click)="logout()">LogOut</a>
             </div>
         </div>
     </div>
