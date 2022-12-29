@@ -10,6 +10,8 @@ import { CausesComponent } from './causes/causes.component';
 import { EventComponent } from './event/event.component';
 import { BlogComponent } from './blog/blog.component';
 import { VolunteerFormComponent } from './volunteer-form/volunteer-form.component';
+import { AuthGuard } from './utility/app.guard';
+
 
 
 
@@ -17,7 +19,7 @@ const routes: Routes = [
   { path: 'team', component:TeamComponent },
 { path: 'service', component:ServicesComponent},
 { path: 'contact', component:ContactComponent },
-{path:'donate',component:DonateComponent},
+{path:'donate',component:DonateComponent,canActivate:[AuthGuard]},
 {path:'about',component:AboutusComponent},
 {path:'causes',component:CausesComponent},
 {path:'events',component:EventComponent},
