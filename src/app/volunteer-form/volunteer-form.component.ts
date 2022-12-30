@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VolunteerFormComponent implements OnInit {
 
+  title: String = "Volunteer"
+
   constructor() { }
 
   ngOnInit(): void {

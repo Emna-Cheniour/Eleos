@@ -1,1 +1,19 @@
-<p>event works!</p>
+<app-top-bar-start></app-top-bar-start>
+<app-navbar></app-navbar>
+<app-page-header [title]="title"></app-page-header>
+
+<div class="event">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Upcoming Events</p>
+            <h2>Be ready for our upcoming charity events</h2>
+        </div>
+        <div class="row">
+            <!-- <div class="col-lg-6"> -->
+                <app-event-item class="col-lg-6" *ngFor="let e of events" [event]="e"></app-event-item>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
