@@ -9,6 +9,7 @@ import { KeycloakService } from 'keycloak-angular';
 export class NavbarComponent implements OnInit {
 
   constructor(private keyCloakService: KeycloakService) { }
+  //detect wether a user is logged in or not
   isLoggedIn:boolean=false;
   ngOnInit(): void {
     this.keyCloakService.isLoggedIn().then
