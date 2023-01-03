@@ -24,6 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DonateComponent } from './donate/donate.component';
 import { initializeKeycloak } from './utility/app.init';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,12 +48,15 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
     BlogComponent,
     EventItemComponent,
     FactsComponent,
-    DonateComponent
+    DonateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    KeycloakAngularModule
+    KeycloakAngularModule,
+    FormsModule,
+    ReactiveFormsModule, 
+    HttpClientModule
   ],
   providers: [{
     provide: APP_INITIALIZER,

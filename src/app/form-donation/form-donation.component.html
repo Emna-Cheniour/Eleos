@@ -1,5 +1,5 @@
 <!-- Donate Start -->
-<div class="donate" data-parallax="scroll" data-image-src="img/donate.jpg">
+<div class="donate" data-parallax="scroll" data-image-src="assets/img/donate.jpg">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -10,33 +10,72 @@
                     </div>
                     <div class="donate-text">
                         <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem. Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                            A donation is a gift for charity, humanitarian aid, or to benefit a cause. A donation may
+                            take various forms, including money, alms, services, or goods such as clothing, toys, food,
+                            or vehicles.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-5">
                 <div class="donate-form">
-                    <form>
-                        <div class="control-group">
-                            <input type="text" class="form-control" placeholder="Name" required="required" />
+                    <form [formGroup]="donationInfo" (ngSubmit)="addDonation(donationInfo.value)" action=""
+                        method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label>Article Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Name" formControlName="name"
+                                required>
+                            <div class="alert-danger"
+                                *ngIf="!donationInfo.controls['name'].valid && (donationInfo.controls['name'].touched)">
+                                <!-- <div [hidden]="!donationInfo.controls['name'].errors?['required']">
+                              Name is required.
+                            </div> -->
+                            </div>
                         </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" placeholder="Email" required="required" />
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" class="form-control" placeholder="Description"
+                                formControlName="description" required>
+                            <div class="alert-danger"
+                                *ngIf="!donationInfo.controls['description'].valid && (donationInfo.controls['description'].touched)">
+                                <!-- <div [hidden]="!donationInfo.controls['description'].errors?.required">
+                              Description is required.
+                            </div> -->
+                                <!-- <div [hidden]="!donationInfo.controls['description'].errors?.minlength">
+                              Description must be have 10 character length.
+                            </div>
+                            <div [hidden]="!donationInfo.controls['description'].errors?.maxlength">
+                              Description must be have 1000 character length.
+                            </div> -->
+                            </div>
                         </div>
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-custom active">
-                                <input type="radio" name="options" checked> $10
-                            </label>
-                            <label class="btn btn-custom">
-                                <input type="radio" name="options"> $20
-                            </label>
-                            <label class="btn btn-custom">
-                                <input type="radio" name="options"> $30
-                            </label>
+                        <div class="form-group">
+                            <label>Type</label>
+                            <select class="form-select form-control" aria-label="Select Your Donation Type"
+                                formControlName="type" required>
+                                <option value="Clothes" selected>Clothes</option>
+                                <option value="Shoes and Bags">Shoes and Bags</option>
+                                <option value="Kitchenware">Kitchenware</option>
+                                <option value="Books">Books</option>
+                                <option value="Toys and Games">Toys and Games</option>
+                                <option value="Linens">Linens</option>
+                                <option value="Hygiene Essentials">Hygiene Essentials</option>
+                                <option value="Furnitures">Furnitures</option>
+                            </select>
+                            <div class="alert-danger"
+                                *ngIf="!donationInfo.controls['type'].valid && (donationInfo.controls['type'].touched)">
+                                <!-- <div [hidden]="!donationInfo.controls['type'].errors?.required">
+                              type is required.
+                            </div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Article Image</label>
+                            <input formControlName="file" id="file" type="file">
+
                         </div>
                         <div>
-                            <button class="btn btn-custom" type="submit">Donate Now</button>
+                            <button type="submit" class="btn btn-custom">Submit</button>
                         </div>
                     </form>
                 </div>
