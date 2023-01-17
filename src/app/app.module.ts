@@ -30,6 +30,7 @@ import { HomeComponent } from './home/home.component';
 import { CauseItemComponent } from './cause-item/cause-item.component';
 import { OrganisationsComponent } from './organisations/organisations.component';
 import { SafeurlPipe } from './safeurl.pipe';
+import { DonationsComponent } from './donations/donations.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { SafeurlPipe } from './safeurl.pipe';
     CauseItemComponent,
     OrganisationsComponent,
     SafeurlPipe,
+    DonationsComponent,
   ],
   imports: [
     BrowserModule,

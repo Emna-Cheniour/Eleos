@@ -1,0 +1,48 @@
+.donations {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+.container{
+    margin: 10rem;
+}
+
+.donations .donations-carousel {
+    width: calc(100% + 30px);
+}
+.row{
+    margin-left: -50px;
+    margin-right: -50px;
+}
+.donations .donations-item {
+    margin: 1rem;
+    overflow: hidden;
+    background: #f3f6ff;
+}
+
+.donations .donations-img {
+    overflow: hidden;
+}
+
+.donations .donations-img img {
+    width: 100%;
+    transition: .3s;
+}
+
+.donations .donations-item:hover img {
+    transform: scale(1.1);
+}
+
+
+.donations .donations-text {
+    padding: 0 30px;
+}
+
+.donations .donations-text h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.donations .donations-text p {
+    margin: 0;
+}
