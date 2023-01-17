@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Event } from '../model/Event';
 
 @Component({
@@ -10,7 +10,7 @@ export class EventComponent implements OnInit {
 
   title: String = "Upcoming Events";
   events: Event[] = [];
-
+  @Input() show : boolean = true;
   constructor() { }
 
   ngOnInit(): void {

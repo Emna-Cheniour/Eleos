@@ -1,5 +1,5 @@
 
-<app-page-header pageName="Service"></app-page-header>
+<app-page-header *ngIf="show" pageName="Service"></app-page-header>
 
 <!-- Service Start -->
 <div class="service">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="service-text">
                         <h3>Healthy Food</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                        <p>Providing meals to people facing hunger is about more than food. It's about providing wellness, nourishment, and strength. That's why we provide the most nutritious food possible to improve people's health and well-being.</p>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="service-text">
                         <h3>Pure Water</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                        <p>Prophet Muhammad (SAW) said: “The best charity is giving water to drink.”</p>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="service-text">
                         <h3>Health Care</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                        <p>Tending to support some of the most marginalised groups to tackle the root causes of poor health.</p>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="service-text">
                         <h3>Primary Education</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                        <p>Education is important and fetches us respect in the society. An educated person is an asset to the society that will help the country grow.</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="service-text">
                         <h3>Residence Facilities</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                        <p>Home means to families, not just during the holidays, but every day. When we provide houses for families in need, we all can experience the incredible joy when they unlock the door to their new home.</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="service-text">
                         <h3>Social Care</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                        <p>Supporting individuals or groups who live with special needs, disabilities, are going through personal crises or need extra support to cope with everyday life.</p>
                     </div>
                 </div>
             </div>
@@ -89,49 +89,50 @@
             <h2>Let's know about charity causes around the world</h2>
         </div>
         <div class="owl-carousel causes-carousel row" >
-            <div class="causes-item col">
+
+            <!-- <div class="causes-item col">
                 <div class="causes-img">
-                    <img src="assets/img/causes-1.jpg" alt="Image">
+                    <img src="../../assets/img/causes-1.jpg" alt="Image">
                 </div>
-                
+
                 <div class="causes-text">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                    <h3>Religious causes</h3>
+                    <p>Receive the largest share of donations in terms of total money given. In a typical month around half the population makes a donation to a charity, and around 70% give at least once a year.</p>
                 </div>
                 <div class="causes-btn">
                     <a class="btn btn-custom">Learn More</a>
                     <a class="btn btn-custom">Donate Now</a>
                 </div>
-            </div>
-            <div class="causes-item col">
+            </div> -->
+            <!-- <div class="causes-item col">
                 <div class="causes-img">
-                    <img src="assets/img/causes-2.jpg" alt="Image">
+                    <img src="../../assets/img/causes-2.jpg" alt="Image">
                 </div>
                 
                 <div class="causes-text">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                    <h3>Medical causes</h3>
+                    <p>Medical research was the most popular cause for a long time in terms of the number of people donating.</p>
                 </div>
                 <div class="causes-btn">
                     <a class="btn btn-custom">Learn More</a>
                     <a class="btn btn-custom">Donate Now</a>
                 </div>
-            </div>
-            <div class="causes-item col">
+            </div> -->
+            <!-- <div class="causes-item col">
                 <div class="causes-img">
-                    <img src="assets/img/causes-3.jpg" alt="Image">
+                    <img src="../../assets/img/causes-3.jpg" alt="Image">
                 </div>
                 
                 <div class="causes-text">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                    <h3>Charity association</h3>
+                    <p>Children and young people's charities have been the most popular cause for people to donate to.</p>
                 </div>
                 <div class="causes-btn">
                     <a class="btn btn-custom">Learn More</a>
                     <a class="btn btn-custom">Donate Now</a>
                 </div>
-            </div>
-           
+            </div> -->
+            <app-cause-item class="col-lg-4" *ngFor="let c of causes" [cause]="c"></app-cause-item>
         </div>
     </div>
 </div>
