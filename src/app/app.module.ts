@@ -28,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CauseItemComponent } from './cause-item/cause-item.component';
+import { OrganisationsComponent } from './organisations/organisations.component';
+import { SafeurlPipe } from './safeurl.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { CauseItemComponent } from './cause-item/cause-item.component';
     DonateComponent,
     HomeComponent,
     CauseItemComponent,
+    OrganisationsComponent,
+    SafeurlPipe,
   ],
   imports: [
     BrowserModule,

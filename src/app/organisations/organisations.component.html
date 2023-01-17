@@ -1,0 +1,47 @@
+<app-top-bar-start></app-top-bar-start>
+<app-navbar></app-navbar>
+<app-page-header pageName="Organisations"></app-page-header>
+
+<div class="blog">
+    <div class="container">
+        <div class="section-header text-center">
+            
+            <h2>Top Organisations we cooperate with</h2>
+        </div>
+        
+        <div class="row" style=" align-items: center; ">
+            <div class="col-lg-4" *ngFor="let organisation of this.organisations">
+                <div class="blog-item">
+                    <div class="blog-img" >
+                        <img src="{{organisation.photoLink}}" alt="Image">
+                    </div>
+                    <div class="blog-text"  style="align-items: center; height: 350px;">
+                        <h2 style="text-align: center;">{{organisation.name}}</h2>
+                        <p style="text-align: center;">{{organisation.description}}</p>
+
+                        <button class="btn btn-custom" style="margin:10px 0px 0px 80px;" (click)="locate(organisation.gmlink)">view on map</button>
+                        
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+   
+            
+        </div>
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe [src]="location | safeurl" style="border:0;width: 100%; height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <a href="https://putlocker-is.org">
+
+                </a>
+                <br>
+            </div>
+        </div>
+       
+    </div>
+</div>

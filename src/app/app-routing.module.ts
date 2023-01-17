@@ -11,13 +11,18 @@ import { EventComponent } from './event/event.component';
 import { BlogComponent } from './blog/blog.component';
 import { VolunteerFormComponent } from './volunteer-form/volunteer-form.component';
 import { AuthGuard } from './utility/app.guard';
+import { HomeComponent } from './home/home.component';
+import { OrganisationsComponent } from './organisations/organisations.component';
 
 
 
 
 const routes: Routes = [
+
+  { path: '', component: HomeComponent },
   { path: 'team', component: TeamComponent },
   { path: 'service', component: ServicesComponent },
+  { path: 'organisations', component: OrganisationsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'donate', component: DonateComponent, canActivate: [AuthGuard] },
   { path: 'about', component: AboutusComponent },

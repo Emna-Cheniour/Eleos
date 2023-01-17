@@ -7,19 +7,20 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="/about" class="nav-item nav-link">About</a>
-                <a href="/causes" class="nav-item nav-link">Causes</a>
-                <a href="/events" class="nav-item nav-link">Events</a>
-                <a href="/blog" class="nav-item nav-link">Blog</a>
-                <a href="/donate" class="nav-item nav-link">Donate ♥</a>
+                <a [routerLink]="['/home']" class="nav-item nav-link">Home</a>
+                <a [routerLink]="['/about']" class="nav-item nav-link">About</a>
+                <a [routerLink]="['/causes']" class="nav-item nav-link">Causes</a>
+                <a [routerLink]="['/events']" class="nav-item nav-link">Events</a>
+                <a [routerLink]="['/blog']" class="nav-item nav-link">Blog</a>
+                <a [routerLink]="['/organisations']" class="nav-item nav-link">Organisations</a>
+                <a [routerLink]="['/donate']" class="nav-item nav-link">Donate</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">More Pages</a>
                     <div class="dropdown-menu">
-                        <a href="/single" class="dropdown-item">Detail Page</a>
-                        <a href="/service" class="dropdown-item">What We Do</a>
-                        <a href="/team" class="dropdown-item">Meet The Team</a>
-                        <a href="/volunteer" class="dropdown-item">Become A Volunteer</a>
+                        <a [routerLink]="['/single']" class="dropdown-item">Detail Page</a>
+                        <a [routerLink]="['/service']" class="dropdown-item">What We Do</a>
+                        <a [routerLink]="['/team']" class="dropdown-item">Meet The Team</a>
+                        <a [routerLink]="['/volunteer']" class="dropdown-item">Become A Volunteer</a>
                     </div>
                 </div>
                 
