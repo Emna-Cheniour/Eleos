@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-aboutus',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutusComponent implements OnInit {
 
   constructor() { }
-
+  @Input() show : boolean = true;
   ngOnInit(): void {
   }
 
