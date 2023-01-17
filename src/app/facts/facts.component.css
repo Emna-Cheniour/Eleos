@@ -6,6 +6,10 @@
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, .5);
+    background-image: url(../../assets/img/facts.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .facts .facts-item {

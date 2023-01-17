@@ -7,24 +7,12 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto">
-                <a [routerLink]="['/home']" class="nav-item nav-link">Home</a>
+                <a [routerLink]="['/']" class="nav-item nav-link">Home</a>
                 <a [routerLink]="['/about']" class="nav-item nav-link">About</a>
-                <a [routerLink]="['/causes']" class="nav-item nav-link">Causes</a>
-                <a [routerLink]="['/events']" class="nav-item nav-link">Events</a>
-                <a [routerLink]="['/blog']" class="nav-item nav-link">Blog</a>
                 <a [routerLink]="['/organisations']" class="nav-item nav-link">Organisations</a>
                 <a [routerLink]="['/donate']" class="nav-item nav-link">Donate</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">More Pages</a>
-                    <div class="dropdown-menu">
-                        <a [routerLink]="['/single']" class="dropdown-item">Detail Page</a>
-                        <a [routerLink]="['/service']" class="dropdown-item">What We Do</a>
-                        <a [routerLink]="['/team']" class="dropdown-item">Meet The Team</a>
-                        <a [routerLink]="['/volunteer']" class="dropdown-item">Become A Volunteer</a>
-                    </div>
-                </div>
-                
-                <a href="/contact" class="nav-item nav-link">Contact</a>
+                <a [routerLink]="['/team']" class="nav-item nav-link">Team</a>
+                <a [routerLink]="['/contact']" class="nav-item nav-link">Contact</a>
                 <a  class="nav-item nav-link" *ngIf="isLoggedIn" (click)="logout()">LogOut</a>
             </div>
         </div>

@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit {
     (
       (value)=>{this.isLoggedIn=value;}
     )
+    
   }
   logout():void{
     this.keyCloakService.logout('http://localhost:4200/contact');

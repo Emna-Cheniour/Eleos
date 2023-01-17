@@ -1,5 +1,5 @@
    
-<app-page-header pageName="About Us"></app-page-header>
+<app-page-header *ngIf="show" pageName="About Us"></app-page-header>
    
 <!-- About Start -->
 <div class="about">
@@ -7,7 +7,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-img" data-parallax="scroll" data-image-src="../../assets/img/about.jpg">
-                    <img src="../../assets/img/about.jpg" alt="about">
+                    <img style="padding-top: 100px;" src="../../assets/img/about.jpg" alt="about">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -15,36 +15,21 @@
                     <p>Learn About Us</p>
                     <h2>Non-profit charity organization</h2>
                 </div>
-                <div class="about-tab">
-                    <ul class="nav nav-pills nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
-                        </li>
-                    </ul>
+                
 
                     <div class="tab-content">
                         <div id="tab-content-1" class="container tab-pane active">
-                            aaaaaaaaaaaaaaaaaaaaa
+                           <p> We are an intermidiate between donators and charities </p>
+                           <p>The items that you donate will be seen by charities </p>
+                           <p>specialised in helping the poor wich in their turn </p>
+                           <p>will bring your donations to people in need</p>
                         </div>
-                        <div id="tab-content-2" class="container tab-pane fade">
-                            Helping Hands is first and foremost about community. We are a community that believes in the power of volunteering to enrich our lives and the world around us. We are a service that brings youth and good causes together. We believe that our success can be seen in the relationships formed between nonprofits and volunteers. Our aim is to build a service that will overcome the barriers that keep volunteers and nonprofits from finding each other, working together, and developing strong relationships.We believe in the power of students. The belief that they have the power to give back and deserve opportunities to build their skills.
-                            Eleos believes that volunteering can change lives-starting with yours. When we connect with our communities and each other through service we can find our passion and purpose, build camaraderie and hope, and experience joy and gratitude. Every person deserves an opportunity to be a part of the greater good.
-                        </div>
-                        <div id="tab-content-3" class="container tab-pane fade">
-                            Bring people and communities together through service.
-                            Digital infrastructure that strengthens the ethos and impact of volunteering at scale.
-                        </div>
+                        
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 <!-- About End -->
