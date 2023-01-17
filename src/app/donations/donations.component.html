@@ -5,11 +5,11 @@
 <div class="donations">
     <div class="container">
         <div class="section-header text-center">
-            <h2>Donations </h2>
+            <h2>“Happiness doesn't result from what we get, but from what we give“ </h2>
         </div>
 
             <div class="owl-carousel donations-carousel row">
-                <div class="donations-item col-lg-4" *ngFor="let donation of donations$ | async">
+                <div class="donations-item" *ngFor="let donation of donations$ | async">
                     <div class="donations-img">
                         <img src="../../assets/img/donation.jpg" alt="donation">
                     </div>
@@ -17,7 +17,13 @@
                         <h3>{{donation.name}}</h3>
                         <p>{{donation.description}}</p>
                     </div>
+                    <div class="donations-btn">
+                        <a class="btn btn-custom">Take</a>
+                        <a class="btn btn-custom">Take</a>
+                    </div>
                 </div>
             </div>
+
+            
     </div>
 </div>

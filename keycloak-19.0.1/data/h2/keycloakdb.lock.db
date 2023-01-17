@@ -1,6 +1,6 @@
 #FileLock
-#Tue Jan 17 22:09:20 WEST 2023
-server=localhost\:61971
-hostName=localhost
+#Tue Jan 17 22:47:06 WEST 2023
+server=192.168.8.100\:64132
+hostName=DESKTOP-R19AS76
 method=file
-id=185c18a220d92f16eb81dbff64af0444183b269c469
+id=185c1b33b322d12f36ff1c1de0a6910540b3dcdbd85

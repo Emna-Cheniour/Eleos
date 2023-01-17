@@ -1,22 +1,20 @@
 .donations {
     position: relative;
     width: 100%;
-    padding: 45px 0;
-}
-.container{
-    margin: 10rem;
+    padding:  0;
 }
 
 .donations .donations-carousel {
     width: calc(100% + 30px);
 }
 .row{
-    margin-left: -50px;
     margin-right: -50px;
 }
 .donations .donations-item {
     margin: 1rem;
+    padding: 1rem;
     overflow: hidden;
+    width: 30%;
     background: #f3f6ff;
 }
 
@@ -45,4 +43,23 @@
 
 .donations .donations-text p {
     margin: 0;
+}
+.donations .donations-btn {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.donations .donations-btn .btn {
+    padding: 10px 0;
+    width: 50%;
+}
+
+.donations .donations-btn .btn:last-child {
+    color: #20212B;
+    background: #FDBE33;
+}
+
+.donations .donations-btn .btn:last-child:hover {
+    color: #ffffff;
 }
