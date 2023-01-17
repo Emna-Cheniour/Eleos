@@ -16,15 +16,15 @@ import { AuthGuard } from './utility/app.guard';
 
 
 const routes: Routes = [
-  { path: 'team', component:TeamComponent },
-{ path: 'service', component:ServicesComponent},
-{ path: 'contact', component:ContactComponent },
-{path:'donate',component:DonateComponent,canActivate:[AuthGuard]},
-{path:'about',component:AboutusComponent},
-{path:'causes',component:CausesComponent},
-{path:'events',component:EventComponent},
-{path:'blog',component:BlogComponent},
-{path:'volunteer',component:VolunteerFormComponent}
+  { path: 'team', component: TeamComponent },
+  { path: 'service', component: ServicesComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'donate', component: DonateComponent, canActivate: [AuthGuard] },
+  { path: 'about', component: AboutusComponent },
+  { path: 'causes', component: CausesComponent },
+  { path: 'events', component: EventComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'volunteer', component: VolunteerFormComponent }
 
 
 ];
