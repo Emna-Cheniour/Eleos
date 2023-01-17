@@ -1,5 +1,5 @@
 <!-- Donate Start -->
-<div class="donate" data-parallax="scroll" data-image-src="assets/img/donation.jpg">
+<div class="donate" data-parallax="scroll" data-image-src="./assets/img/donation.jpg">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -21,16 +21,17 @@
                 <div class="donate-form">
                     <form [formGroup]="donationInfo" (ngSubmit)="addDonation(donationInfo.value)" action=""
                         method="post" enctype="multipart/form-data">
+
                         <div class="form-group">
                             <label>Article Name</label>
                             <input type="text" class="form-control" placeholder="Enter Name" formControlName="name"
                                 required>
-                            <div class="alert-danger"
-                                *ngIf="!donationInfo.controls['name'].valid && (donationInfo.controls['name'].touched)">
-                                <!-- <div [hidden]="!donationInfo.controls['name'].errors?['required']">
-                              Name is required.
-                            </div> -->
-                            </div>
+                            <!-- <div class="alert-danger"
+                                *ngIf="!donationInfo.controls['name'].valid && (donationInfo.controls['name'].touched)"> -->
+                                <!-- <div *ngIf="f.name.touched && f.name.invalid">
+                                    <div *ngIf="f.name.errors.required">Name is required.</div>
+                                </div> -->
+                            <!-- </div> -->
                         </div>
                         <div class="form-group">
                             <label>Description</label>
@@ -50,9 +51,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Type</label>
-                            <select class="form-select form-control" aria-label="Select Your Donation Type"
-                                formControlName="type" required>
+                            <label>Category</label>
+                            <select class="form-select form-control" aria-label="Select Your Donation Category"
+                                formControlName="categorie" name="categorie" required>
                                 <option value="Clothes" selected>Clothes</option>
                                 <option value="Shoes and Bags">Shoes and Bags</option>
                                 <option value="Kitchenware">Kitchenware</option>
@@ -62,18 +63,17 @@
                                 <option value="Hygiene Essentials">Hygiene Essentials</option>
                                 <option value="Furnitures">Furnitures</option>
                             </select>
-                            <div class="alert-danger"
-                                *ngIf="!donationInfo.controls['type'].valid && (donationInfo.controls['type'].touched)">
+                            <!-- <div class="alert-danger"
+                                *ngIf="!donationInfo.controls['type'].valid && (donationInfo.controls['type'].touched)"> -->
                                 <!-- <div [hidden]="!donationInfo.controls['type'].errors?.required">
                               type is required.
                             </div> -->
-                            </div>
+                            <!-- </div> -->
                         </div>
-                        <div class="form-group">
-                            <label>Article Image</label>
-                            <input formControlName="file" id="file" type="file">
-
-                        </div>
+                        <input formControlName="file" id="file" type="file" (change)="onFileChange($event)">
+                        <!-- <div *ngIf="f.file.touched && f.file.invalid">
+                            <div *ngIf="f.file.errors.required">File is required.</div>
+                        </div> -->
                         <div>
                             <button type="submit" class="btn btn-custom">Submit</button>
                         </div>
