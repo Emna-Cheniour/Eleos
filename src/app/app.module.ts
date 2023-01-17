@@ -26,6 +26,8 @@ import { initializeKeycloak } from './utility/app.init';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { CauseItemComponent } from './cause-item/cause-item.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     EventItemComponent,
     FactsComponent,
     DonateComponent,
+    HomeComponent,
+    CauseItemComponent,
   ],
   imports: [
     BrowserModule,
