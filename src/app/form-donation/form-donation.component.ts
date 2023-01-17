@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { DonationService } from '../donation.service';
 
 @Component({
   selector: 'app-form-donation',
@@ -11,7 +12,7 @@ export class FormDonationComponent implements OnInit {
 
   donationInfo: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder,private donationService: DonationService, private http: HttpClient) {
     this.donationInfo = this.fb.group({
       name:  ['', Validators.required],
       description: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(1000)])],
@@ -35,14 +36,10 @@ export class FormDonationComponent implements OnInit {
     productData.append('categorie', values.categorie);
     // productData.append('fileSource', this.donationInfo.get('fileSource')?.value);
  
-    this.http
-      .post('http://localhost:4000/eleos/articles', productData)
-      .subscribe({
-        next: (response) => console.log(response),
-        error: (error) => console.log(error),
-      });
+    this.donationService.addDonation(productData);
 
   }
+  
   onFileChange(event: any) {
 
     if (event.target.files.length > 0) {
