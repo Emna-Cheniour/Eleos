@@ -25,7 +25,16 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/easing.min.js",
+              "src/assets/js/waypoints.min.js",
+              "src/assets/js/counterup.min.js",
+              "src/assets/js/parallax.min.js",
+              "src/assets/js/jqBootstrapValidation.min.js",
+              "src/assets/js/contact.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
