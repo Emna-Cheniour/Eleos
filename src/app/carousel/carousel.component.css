@@ -1,7 +1,7 @@
 /*******************************/
 /********** Hero CSS ***********/
 /*******************************/
-@import "../../../free-charity-website-template/lib/animate/animate.min.css";
+@import "../../assets/lib/animate/animate.min.css";
 
 .carousel {
     position: relative;
