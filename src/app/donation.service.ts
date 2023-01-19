@@ -5,11 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DonationService {
-
+  
   constructor(private http: HttpClient) { }
   createProduct(data:any){
     console.log(data);
-    
   }
 
   getDonations(){
@@ -25,7 +24,22 @@ export class DonationService {
     });
   }
 
-  reserveDonation(reserved: FormData){
-
+  reserveDonation(reserved : any){
+    
+    const id=reserved["_id"]
+    
+    this.http
+    .post('http://localhost:4000/eleos/article-reserved', reserved)
+    .subscribe({
+      next: (response) => console.log(response),
+      error: (error) => console.log(error),
+    });
+    this.http
+    .delete(`http://localhost:4000/eleos/articles/${id}`)
+    .subscribe({
+      next: (response) => console.log(response),
+      error: (error) => console.log(error),
+    });
+   
   }
 }

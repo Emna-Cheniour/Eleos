@@ -11,6 +11,7 @@ import { DonationService } from '../donation.service';
 export class FormDonationComponent implements OnInit {
 
   donationInfo: FormGroup;
+  selectedFile!: File;
 
   constructor(private fb: FormBuilder,private donationService: DonationService, private http: HttpClient) {
     this.donationInfo = this.fb.group({
@@ -34,7 +35,7 @@ export class FormDonationComponent implements OnInit {
     productData.append('name', values.name);
     productData.append('description', values.description);
     productData.append('categorie', values.categorie);
-    // productData.append('fileSource', this.donationInfo.get('fileSource')?.value);
+    productData.append('fileSource', this.selectedFile);
  
     this.donationService.addDonation(productData);
 
@@ -43,10 +44,7 @@ export class FormDonationComponent implements OnInit {
   onFileChange(event: any) {
 
     if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      this.donationInfo.patchValue({
-        fileSource: file
-      });
+      const selectedFile = event.target.files[0];
     }
   }
 
