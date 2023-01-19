@@ -15,7 +15,7 @@ export class DonationService {
     return this.http.get('http://localhost:4000/eleos/articles');
   }
 
-  addDonation(productData: FormData){
+  addDonation(productData: any){
     this.http
     .post('http://localhost:4000/eleos/articles', productData)
     .subscribe({
