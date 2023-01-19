@@ -19,7 +19,6 @@ import { DonationsComponent } from './donations/donations.component';
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
-  { path: 'team', component: TeamComponent },
 
   { path: 'organisations', component: OrganisationsComponent },
   { path: 'donations', component: DonationsComponent },
